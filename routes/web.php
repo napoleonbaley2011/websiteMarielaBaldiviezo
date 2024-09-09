@@ -12,18 +12,22 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
-		return view('dashboard');
-	})->name('dashboard');
+        return view('dashboard');
+    })->name('dashboard');
 
-    
+
+    Route::get('profile', function () {
+        return view('profile/profile');
+    })->name('profile');
 
     Route::get('user-create', function () {
-		return view('users/createuser');
-	})->name('user-create');
+        return view('users/createuser');
+    })->name('user-create');
 
     Route::get('user-management', [UserController::class, 'index'])->name('user-management');
     Route::delete('user-delete/{user}', [UserController::class, 'destroy'])->name('user-delete');
     Route::post('/register', [UserController::class, 'store']);
+    Route::get('/logout', [LoginController::class, 'destroy']);
 });
 
 

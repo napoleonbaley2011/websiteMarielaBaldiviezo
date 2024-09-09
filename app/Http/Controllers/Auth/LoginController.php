@@ -14,7 +14,6 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-
     // Procesa el inicio de sesión
     public function store(Request $request)
     {

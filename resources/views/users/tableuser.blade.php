@@ -44,7 +44,7 @@
                                             <td class="ps-4">{{ $user->id }}</td>
                                             <td class="text-center">{{ $user->name }}</td>
                                             <td class="text-center">{{ $user->email }}</td>
-                                            <td class="text-center">User</td>
+                                            <td class="text-center">Admin</td>
                                             <td class="text-center">{{ $user->created_at->format('d/m/Y') }}</td>
                                             <td class="text-center">
                                                 <a href="" class="mx-3"
